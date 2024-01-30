@@ -8,6 +8,7 @@ const router = Router();
 
 // GET
 router.get('/', tokenMiddleware, userController.getAll);
+router.get('/:id', tokenMiddleware, userController.getById);
 
 // POST
 router.post('/', userMiddleware.userCreate, userController.create);
